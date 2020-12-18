@@ -14,6 +14,10 @@
 #include <nxt_unit.h>
 #include <nxt_unit_request.h>
 
+#if VERNUM != NXT_VERNUM
+#error Unit version mismatch
+#endif
+
 enum {
     NXT_FIELDS_OFFSET = offsetof(nxt_unit_request_t, fields)
 };
